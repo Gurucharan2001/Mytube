@@ -1,0 +1,9 @@
+node_modules
+.cache/
+dist/
+.env
+.DS_Store
+coverage/
+.vscode/
+api key:-AIzaSyB9QKioCI42I2oYOVCi4TPWlKzjdICIA9k
+api url=https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyB9QKioCI42I2oYOVCi4TPWlKzjdICIA9k

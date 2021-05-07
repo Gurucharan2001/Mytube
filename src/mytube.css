@@ -94,6 +94,7 @@ header{
     overflow: hidden;
     padding: 25px 0;
     border-bottom: 2px solid #d8dee6;
+    text-decoration: none;
 }
 
 .video-image{
@@ -116,4 +117,38 @@ header{
 
 .inner-font{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*watch area*/
+
+
+
+.watch-area{
+    background-color: #ececec;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.player{
+    text-align: center;
+}
+
+.watch-area .video-information{
+    display: flex;
+    justify-content: space-between;
+    padding:  0 1rem;
+}
+
+.watch-area .channel-name{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.watch-area h1{
+    text-align: center;
+    color: #ad343e;
+    margin: 5px 0;
+    font-size:1.5rem ;
 }

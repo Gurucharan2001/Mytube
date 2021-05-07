@@ -1,9 +1,10 @@
+import { Link } from "@reach/router";
 import React from "react"
 
 //Vedio component
 const Video = (props) => {
   return (
-    <div className="video-container">
+    <Link to={`/watch/${props.id}`} className="video-container">
       <div className="video-image">
         <img src={props.thumbnails} alt="thumbnils" />
       </div>
@@ -14,7 +15,7 @@ const Video = (props) => {
         <p className="inner-font">{props.description}</p>
       </div>
         
-    </div>
+    </Link>
   )
   };
 

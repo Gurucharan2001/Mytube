@@ -1,7 +1,11 @@
-import Video from "./Video";
+
 import SearchArea from "./SearchArea";
 import React from "react";
 import ReactDOM from "react-dom";
+import {Router} from "@reach/router";
+import WatchArea from "./WatchArea";
+
+//React router,Reach Router,Navi Router 
 
 
 //App component
@@ -12,7 +16,11 @@ const App = () => {
     <header>
       <a href="#">MyTube</a>
     </header>
-    <SearchArea></SearchArea>
+    <Router>
+    <SearchArea path="/" />
+    <WatchArea path="/watch/:id" />
+
+    </Router>
   </div>)
 
 };

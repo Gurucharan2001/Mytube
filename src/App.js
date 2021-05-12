@@ -14,7 +14,7 @@ const App = () => {
   return(
   <div>
     <header>
-      <a href="#">MyTube</a>
+      <a href="/">MyTube</a>
     </header>
     <Router>
     <SearchArea path="/" />

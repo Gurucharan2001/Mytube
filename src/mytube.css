@@ -70,7 +70,7 @@ header{
 }
 
 
-.search-area button{
+.search-area button,.watch-area button{
     margin: 0 auto;
     display: block;
     padding: 5px 25px;
@@ -158,4 +158,49 @@ header{
     color: #ad343e;
     margin: 5px 0;
     font-size:1.5rem ;
+}
+
+/* modal */
+
+#modal{
+    background-color: rgba(0, 0, 0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal:empty{
+    display: none;
+}
+
+#modal div{
+    width:500px;
+    background-color: #ececec;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#modal button{
+    margin: 0 auto;
+    display: block;
+    padding: 5px 25px;
+    color:white;
+    font-size: 1.1rem;
+    border:#111 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.yes-btn{
+    background-color: rgb(40, 128, 40);
+}
+.no-btn{
+    background-color: #ad343e;
 }

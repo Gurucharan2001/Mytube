@@ -3,6 +3,10 @@ import React from "react";
 import * as AppConstant from "./AppConstant";
 import ErrorBoundary from "./ErrorBoundary";
 import FormatNumber from "./FormatNumber"; 
+import ColorContext from "./ColorContext";
+import Modal from "./Modal";
+import { navigate } from "@reach/router";
+
 
 // const WatchArea = (props)=>{
 //     return (
@@ -14,7 +18,7 @@ import FormatNumber from "./FormatNumber";
 class WatchArea extends React.Component{
     constructor(){
         super()
-        this.state = { loading:true }
+        this.state = { loading:true,showModal:false }
     }
 
     //lifecycle method!!
@@ -35,12 +39,13 @@ class WatchArea extends React.Component{
         .catch((err)=>console.log(err))
     }
 
+
     render(){
         if(this.state.loading){
             <h3>Loading...</h3>
         }
 
-        const { title,views,description,channel,like,url } = this.state
+        const { title,views,description,channel,like,url,showModal } = this.state
 
         return(
             <div className="watch-area">
@@ -60,6 +65,18 @@ class WatchArea extends React.Component{
                     <div className="like inner-font"><FormatNumber number={like} /> Likes</div>
                 </div>
                 <div className="channel-name">{channel} Channel</div>
+                <ColorContext.Consumer>
+                    {
+                        ([themeColor])=>(
+                            <button 
+                                onClick={navigate(`https://www.youtube.com/watch?v=${this.state.url}`)}
+                                style={{backgroundColor: themeColor}} >
+                                    Watch on Youtube
+                            </button>
+                        )
+                    }
+                    
+                </ColorContext.Consumer>
                 <p className="inner-font">{description} Description</p>
             </div>
         )
